@@ -28,7 +28,7 @@ void sum_matrix (int **Matrix, int &m, int &n) {
                 cin >> Matrix_addened[i][j];
         }
         for (int i=0; i<m; i++) {
-            for (int j=0; j<n; j++) Matrix[i][j]= Matrix[i][j]+ Matrix_addened                                                                                                                 $
+            for (int j=0; j<n; j++) Matrix[i][j]= Matrix[i][j]+ Matrix_addened[i][j];
         }
         deleting_Matrix( Matrix_addened, m, n);
     }
