@@ -81,7 +81,8 @@ void multiply_matrix (int **Matrix, int &m, int &n) {
             }
             for (int i = 0; i < m; i++) {
                 for (int j = 0; j < n; j++) {
-                    for (int z = 0; z < m_multiply2; z++) Matrix[i][j] = Matrix                                                                                                                $
+                    for (int z = 0; z < m_multiply2; z++)
+                     Matrix[i][j] = Matrix[i][j] + Matrix_multiply1[i][z] * Matrix_multiply2[z][j];
                 }
             }
             deleting_Matrix (Matrix_multiply1, m_multiply1, n_multiply1);
