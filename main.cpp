@@ -57,7 +57,7 @@ void multiply_matrix (int **Matrix, int &m, int &n) {
         else {
             int **Matrix_multiply2;
             Matrix_multiply2= new int *[m_multiply2];
-            for (int i=0; i<m_multiply2; i++) Matrix_multiply2[i]= new int [n_m                                                                                                                $
+            for (int i=0; i<m_multiply2; i++)  Matrix_multiply2[i]= new int [n_multiply2];
             for (int i=0; i<m_multiply2; i++) {
                 for (int j=0; j<n_multiply2; j++)
                     cin >> Matrix_multiply2[i][j];
