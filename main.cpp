@@ -116,8 +116,8 @@ void transpose_matrix ( int **Matrix, int &m, int &n) {
 void Menu (int **Matrix, int &m, int &n) {
     int choise;
     string exit;
-    while ((exit != "y") && (exit != "yes") && (exit != "Y") && (exit != "Yes")                                                                                                                $
-            (exit != "YES")) {
+    while ((exit != "y") && (exit != "yes") && (exit != "Y") && (exit != "Yes")                           
+           && (exit != "YES")) {
         cout << "Select one of the operations:" << endl;
         cout << "1.Print the matrix" << endl;
         cout << "2.Sum the matrix" << endl;
