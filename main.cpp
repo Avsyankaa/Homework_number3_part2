@@ -173,7 +173,7 @@ int main (int argc, char *argv []) {
         k=0;
         m= atoi (m_str.c_str());
         n= atoi (n_str.c_str());
-        if ((m==0)||(n==0)) Matrix==nullptr;
+        if ((m==0)||(n==0)) Matrix=nullptr;
         else {
         Matrix= new int *[m];
         for (int i=0; i<m; i++) Matrix[i]= new int [n];
