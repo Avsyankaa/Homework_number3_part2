@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
-void print_matrix (int **Matrix, int m, int n) {
+void print_matrix (int **&Matrix, int &m, int &n) {
     if (Matrix==nullptr) cout<< "Matrix is empty"<< endl;
     else {
         for (int i=0; i<m; i++) {
@@ -10,13 +10,13 @@ void print_matrix (int **Matrix, int m, int n) {
         }
     }
 }
-void deleting_Matrix (int **Matrix, int &m, int &n) {
+void deleting_Matrix (int **&Matrix, int &m, int &n) {
     if (Matrix!=nullptr) {
         for (int i=0; i<m; i++) delete[]Matrix[i];
         delete [] Matrix;
     }
 }
-void sum_matrix (int **Matrix, int &m, int &n) {
+void sum_matrix (int **&Matrix, int &m, int &n) {
     if (Matrix==nullptr) cout<< "Matrix is empty"<< endl;
     else {
         cout << "Enter martix "<< m<<"x"<<n<<":"<<endl;
@@ -33,7 +33,7 @@ void sum_matrix (int **Matrix, int &m, int &n) {
         deleting_Matrix( Matrix_addened, m, n);
     }
 }
-void multiply_matrix (int **Matrix, int &m, int &n) {
+void multiply_matrix (int **&Matrix, int &m, int &n) {
     if (Matrix==nullptr) cout<< "Matrix is empty"<< endl;
     else {
         cout << "Enter a size of matrix:" << endl;
@@ -90,7 +90,7 @@ void multiply_matrix (int **Matrix, int &m, int &n) {
         }
     }
 }
-void transpose_matrix ( int **Matrix, int &m, int &n) {
+void transpose_matrix ( int **&Matrix, int &m, int &n) {
     if (Matrix==nullptr) cout<< "Matrix is empty"<< endl;
     else {
         int **Matrix_before_tr;
@@ -113,7 +113,7 @@ void transpose_matrix ( int **Matrix, int &m, int &n) {
         deleting_Matrix (Matrix_before_tr, m_before_tr, n_before_tr);
     }
 }
-void Menu (int **Matrix, int &m, int &n) {
+void Menu (int **&Matrix, int &m, int &n) {
     int choise;
     string exit;
     while ((exit != "y") && (exit != "yes") && (exit != "Y") && (exit != "Yes")                           
