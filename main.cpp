@@ -173,6 +173,8 @@ int main (int argc, char *argv []) {
         k=0;
         m= atoi (m_str.c_str());
         n= atoi (n_str.c_str());
+        if ((m==0)||(n==0)) Matrix==nullptr;
+        else {
         Matrix= new int *[m];
         for (int i=0; i<m; i++) Matrix[i]= new int [n];
         for (int i=0; i<m; i++) {
@@ -217,6 +219,7 @@ int main (int argc, char *argv []) {
                 }
             }
         }
+    }
     }
     Menu( Matrix, m,n);
     deleting_Matrix (Matrix, m,n);
