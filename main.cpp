@@ -53,7 +53,7 @@ void multiply_matrix (int **&Matrix, int &m, int &n) {
         k=0;
         m_multiply2= atoi (m_multiply_str.c_str());
         n_multiply2= atoi (n_multiply_str.c_str());
-        if (n!= m_multiply2) cout << "Uncorrect size!!!" << endl;
+        if ((n!= m_multiply2) || (n_multiply2==0)) cout << "Uncorrect size!!!" << endl;
         else {
             int **Matrix_multiply2;
             Matrix_multiply2= new int *[m_multiply2];
